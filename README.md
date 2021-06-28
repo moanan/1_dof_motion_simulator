@@ -1,6 +1,6 @@
 # 1-DoF motion simulator for dynamic oscillation
 
-An open-source, desktop-size, highly dynamic, 1-DoF linear motion simulator for you to reliabily generate and measure linear motion for your expermentation. All components can be sourced easily.
+An open-source, desktop-size, highly dynamic, 1-DoF linear motion simulator for you to reliably generate and measure linear motion for your experimentation. All components can be sourced easily.
 
 ## What you can do with it
 You can mount your sample on the simulator and applied any linear motion you program to it. This setup is optimized for low payload and high acceleration, which is hard to find in commercially available solutions.
@@ -39,16 +39,6 @@ The programs for the Teensy4.0 and raspberry pi are in the folder `/electronics`
 - Customizable sinusoidal oscillation: amplitude, frequency, duration, interval, repetitions, LCD display text.
 - Manual control to move the platform.
 - Encoder reading in 2 kHz (can be set to other sampling frequencies)
-
-
-<!-- compile:
-`make`
-
-execute:
-`sudo ./encoder`
-
-data logging:
-rawData -->
 
 
 <!-- ## References

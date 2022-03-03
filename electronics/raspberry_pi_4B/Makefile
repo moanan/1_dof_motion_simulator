@@ -2,13 +2,19 @@
 CFLAGS=-c -Wall -Wextra -g -Wno-psabi
 
 # this target will compile all the files
-all: encoder
+all: simulation_actuated simulation_manual
 
-encoder: main.o sensorThread.o sensor.o as5045.o
-	g++ -Wall -o encoder main.o sensorThread.o sensor.o as5045.o -lbcm2835 -pthread
+simulation_actuated: actuated.o sensorThread.o sensor.o as5045.o
+	g++ -Wall -o simulation_actuated actuated.o sensorThread.o sensor.o as5045.o -lbcm2835 -pthread
 
-main.o: main.cpp
-	g++ $(CFLAGS) main.cpp
+simulation_manual: manual.o sensorThread.o sensor.o as5311.o
+	g++ -Wall -o simulation_actuated manual.o sensorThread.o sensor.o as5311.o -lbcm2835 -pthread
+
+actuated.o: actuated.cpp
+	g++ $(CFLAGS) actuated.cpp
+
+manual.o: manual.cpp
+	g++ $(CFLAGS) manual.cpp
 
 sensorThread.o: sensorThread.cpp
 	g++ $(CFLAGS) sensorThread.cpp
@@ -20,4 +26,4 @@ as5045.o: as5045.cpp
 	g++ $(CFLAGS) as5045.cpp -lbcm2835
 
 clean:
-	rm -rf *o encoder
+	rm -rf *o simulation_actuated simulation_manual

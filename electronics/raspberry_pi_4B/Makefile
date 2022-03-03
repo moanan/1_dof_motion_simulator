@@ -2,7 +2,7 @@
 CFLAGS=-c -Wall -Wextra -g -Wno-psabi
 
 # this target will compile all the files
-all: simulation_actuated simulation_manual
+all: simulation_actuated
 
 simulation_actuated: actuated.o sensorThread.o sensor.o as5045.o
 	g++ -Wall -o simulation_actuated actuated.o sensorThread.o sensor.o as5045.o -lbcm2835 -pthread

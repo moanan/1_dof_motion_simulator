@@ -40,6 +40,24 @@ The programs for the Teensy4.0 and raspberry pi are in the folder `/electronics`
 - Manual control to move the platform.
 - Encoder reading in 2 kHz (can be set to other sampling frequencies)
 
+To compile and run the program
+```bash
+make
+sudo ./simulation_actuated
+```
+
+To stop the program, simply press `ctrl+c`. The encoder data can be found in the `rawData` folder.
+
+### One more thing
+In case this motion simulator does not generate enough acceleration or stroke for you, you can adapt this framework to your need, such as a manual shaking platform on a linear rail. The rotary encoder [AS5045 development board](https://ams.com/as5045adapterboard/) can be replaced with a linear one [AS5311 development board](https://ams.com/as5311adapterboard).
+
+The Raspberry Pi program is ready, to compile and run the program
+```bash
+make simulation_manual
+sudo ./simulation_manual
+```
+
 
 <!-- ## References
+You can find more details on xx
 If this project is helpful for your project, we kindly ask you to cite us: -->

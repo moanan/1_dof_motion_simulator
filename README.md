@@ -52,12 +52,7 @@ The Raspberry Pi program for encoder reading is provided too. to compile and run
 make simulation_manual
 sudo ./simulation_manual
 ```
-
 The CAD design of this setup can be found in the folder `mechanics`.
-| Motion simulator (ball screw) | Motion simulator (linear rail)  |
-| --- | --- |
-| ![title](/images/motion_simulator_actuated.png]) | ![title](/images/motion_simulator_manual.png) |
-
 
 <!-- ## References
 You can find more details on xx

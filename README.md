@@ -20,10 +20,6 @@ video demo (Amplitude: 10 mm, Frequency: 4.5 Hz)
 - Emergency stop button
 - DC power supply 50-60V
 
-<!-- ## Mechanics
-TBD
-(Explosion view of everything) -->
-
 ## Electronics
 Teensy 4.0 is chosen for it real-time performance in high speed (600 Mhz). It ensures timing critical tasks are not missed, like sending precise pulses for the stepper motor and display synchronization information on the LCD screen.
 
@@ -51,11 +47,13 @@ To stop the program, simply press `ctrl+c`. The encoder data can be found in the
 ### One more thing
 In case this motion simulator does not generate enough acceleration or stroke for you, you can adapt this framework to your need, such as a manual shaking platform on a linear rail. The rotary encoder [AS5045 development board](https://ams.com/as5045adapterboard/) can be replaced with a linear one [AS5311 development board](https://ams.com/as5311adapterboard).
 
-The Raspberry Pi program is ready, to compile and run the program
+The Raspberry Pi program for encoder reading is provided too. to compile and run the program
 ```bash
 make simulation_manual
 sudo ./simulation_manual
 ```
+
+The CAD design of this setup can be found in the folder `mechanics`.
 
 
 <!-- ## References

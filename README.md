@@ -54,6 +54,9 @@ sudo ./simulation_manual
 ```
 
 The CAD design of this setup can be found in the folder `mechanics`.
+| Motion simulator (ball screw) | Motion simulator (linear rail)  |
+| --- | --- |
+| ![title](/images/motion_simulator_actuated.png]) | ![title](/images/motion_simulator_manual.png) |
 
 
 <!-- ## References
